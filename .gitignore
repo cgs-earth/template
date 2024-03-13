@@ -1,3 +1,12 @@
+## CGS Specific needs
+
+# Vagrant
+Vagrantfile
+.vagrant
+
+
+## Other
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
