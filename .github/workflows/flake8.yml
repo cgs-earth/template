@@ -20,5 +20,6 @@ jobs:
       run: |
         find . -type f -name "*.py" | xargs flake8
     - name: run flake8-notebook ⚙️
+      if: '!cancelled()'
       run: |
         find . -type f -name "*.ipynb" | xargs flake8-nb
