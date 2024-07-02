@@ -44,8 +44,14 @@ repos:
     hooks:
       # Run the linter.
       - id: ruff
-        types_or: [ python, pyi, jupyter ]
-        args: [ --fix ]
+        types_or: [python, pyi, jupyter]
+        args: [--fix]
       # Run the formatter.
       - id: ruff-format
-        types_or: [ python, pyi, jupyter ]
+        types_or: [python, pyi, jupyter]
+  # Remove stale jupyter notebook outputs
+  # For extra options see https://github.com/kynan/nbstripout?tab=readme-ov-file#configuration-files
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.7.1
+    hooks:
+      - id: nbstripout
